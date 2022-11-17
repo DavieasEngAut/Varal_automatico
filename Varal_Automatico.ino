@@ -1,13 +1,10 @@
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
 /*Importaçao de Libraries*/
 #include <NewPing.h>
 
 #define pinSensorA A0
 
 /*
-
   PINOS NO ARDUINO CONSTANTES
-
 */ 
 #define pinRainsensor A0
 #define motorAcionator 5
@@ -19,7 +16,6 @@
 #define MAX_DISTANCE 120
 /*
  Definiçao do Sensor
-
 */
 
 NewPing sensor(TRIG, ECHO, MAX_DISTANCE);
@@ -85,15 +81,8 @@ void loop() {
   }
   
   
-  while (distanceSensor > 120 && pinRainsensor <= 800 ) {
+  while (distanceSensor < 120 && pinRainsensor <= 800 ) {
     
-    //digitalWrite(TRIG, HIGH);
     digitalWrite(motorAcionator, HIGH);
   } 
-  
-  
-  
-  
-  
 }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
