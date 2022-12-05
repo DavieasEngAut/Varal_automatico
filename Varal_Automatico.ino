@@ -28,18 +28,10 @@ const int tempo = 7000;
 void setup(){
 
     Serial.begin(9600);
-    //Leitura do Pinos do Sensor fim de Curso
+
+    //Set dos pinos do Sensor fim de curso para receberem energia
     pinMode(switchCursor, INPUT);
     pinMode(switchCursor2, INPUT);
-
-  // Captura dos valores do Sensor de Fim de curso
-    valorCursor = digitalRead(switchCursor);
-    valorCursor2 = digitalRead(switchCursor2);
-    
-  // Captura de valores do Sensor de chuva
-    pinMode(pinRainsensor, INPUT);
-    valorSensor = analogRead(pinRainsensor);
-    valorSensor = map(pinRainsensor, 0, 1023, 100, 0);
   
  //Print do Valor do sensor de Chuva
     Serial.print(valorSensor);
@@ -54,6 +46,17 @@ void setup(){
 }
 
 void loop(){
+
+
+// Captura dos valores do Sensor de Fim de curso
+    valorCursor = digitalRead(switchCursor);
+    valorCursor2 = digitalRead(switchCursor2);
+
+
+//Captura Valores sensor de chuva 
+    valorSensor = analogRead(pinRainsensor);
+    valorSensor = map(pinRainsensor, 0, 1023, 100, 0);
+
 /*
 
 Aferiçao dos Valores dos Sensores em tempo Real no Serial
@@ -73,7 +76,7 @@ Aferiçao dos Valores dos Sensores em tempo Real no Serial
   /*Supervisionamento dos Motores e ativaçâo*/
 
   // Condicional para retrair o varal
-  if (pinRainsensor < 800 && switchCursor = 1 ){
+  if (valorSensor < 800 && valorCursor == 1 ){
 
     digitalWrite(pinMot1A, HIGH);
     digitalWrite(pinMot1B, LOW);
@@ -93,7 +96,7 @@ Aferiçao dos Valores dos Sensores em tempo Real no Serial
   
   
   // Condicional para expor o varal ao sol
- if (pinRainsensor > 800 && switchCursor2 = 1 ){
+ if (valorSensor > 800 && valorCursor2 == 1 ){
     
     digitalWrite(pinMot1A, LOW);
     digitalWrite(pinMot1B, HIGH);
