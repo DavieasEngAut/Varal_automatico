@@ -33,8 +33,6 @@ void setup(){
     pinMode(switchCursor, INPUT);
     pinMode(switchCursor2, INPUT);
   
- //Print do Valor do sensor de Chuva
-    Serial.print(valorSensor);
 
   // Deixando os pinos dos motores para soltarem energia
     pinMode(pinMot1A, OUTPUT);
@@ -72,6 +70,11 @@ Aferiçao dos Valores dos Sensores em tempo Real no Serial
     Serial.println("Valor Fim de Curso 1");
     Serial.print(valorCursor2);
     delay(500);
+
+
+
+   //Print do Valor do sensor de Chuva
+    Serial.print(valorSensor);
 
   /*Supervisionamento dos Motores e ativaçâo*/
 
