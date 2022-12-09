@@ -5,7 +5,7 @@ Um projeto Simples e basico, para fins educativos e para apresentação ao publi
 
 
 
-Materiais para o circuito:
+<h1>Materiais para o circuito:</h1>
 
 1 Fonte 9V para alimentaçao do arduino e ponte H,
 2 Motores do tipo DC de 5v,
@@ -18,7 +18,7 @@ Para montar o circuito e indicado saber o funcionamento do Modulo L298N, ou ler 
 
 DataSheet do modulo: https://files.comunidades.net/mutcom/Driver_Motor_ponteH__L298N.pdf 
 
- Montagem do Circuito completa, pinos e etc.
+Montagem do Circuito completa, pinos e etc.
 
 
 
@@ -28,7 +28,11 @@ DataSheet do modulo: https://files.comunidades.net/mutcom/Driver_Motor_ponteH__L
 
 
 
- Funcionamento Do Codigo
+ <h1>Funcionamento Do Codigo</h1>
 
-O codigo basicamente consiste em se caso o Sensor de Chuva estiver detectando o valor menor doque 800, ele ira retrair o varal, caso contrario ira continuar em sua posiçao inicial (No sol).
+<h5>O codigo basicamente consiste em se caso o Sensor de Chuva estiver detectando o valor menor doque 800, ele ira retrair o varal, caso contrario ira continuar em sua posiçao inicial (No sol), ou tambem se no caso, chover e logo apos o sensor ficar seco, automaticamente ira ser enviado um sinal maior doque 800 para o pino analogico do arduino, dando a se entender que os motores terao que colocar a roupa para o sol novamente.</h5>
+
+
+
+
 
