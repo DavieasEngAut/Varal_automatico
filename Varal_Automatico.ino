@@ -1,6 +1,3 @@
-
-
-
 //Definiçao pino Sensor de Chuva
 #define pinRainsensor A0
 
