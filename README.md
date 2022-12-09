@@ -4,10 +4,6 @@
 </div>
 
 
-
-
-
-
 # Varal automatico
 Projeto de um Varal Automatizado Com Arduino
 
@@ -40,11 +36,11 @@ Montagem do Circuito completa, pinos e etc.
 
  <h1>Funcionamento Do Codigo</h1>
 
-<h5>O codigo basicamente consiste em se caso o Sensor de Chuva estiver detectando o valor menor doque 800, ele ira retrair o varal, caso contrario ira continuar em sua posiçao inicial (No sol), ou tambem se no caso, chover e logo apos o sensor ficar seco, automaticamente ira ser enviado um sinal maior doque 800 para o pino analogico do arduino, dando a se entender que os motores terao que colocar a roupa para o sol novamente.</h5>
+<h5>O codigo basicamente consiste em se caso o Sensor de Chuva estiver detectando o valor menor doque 800, ele ira retrair o varal, caso contrario ira continuar em sua posiçao inicial (No sol), ou tambem se no caso, chover e logo apos o sensor ficar seco, automaticamente ira ser enviado um sinal maior doque 800 para o pino analogico do arduino, dando a se entender que os motores terao que colocar a roupa para o sol novamente e para que haja a parada correta dos motores na sombra e no sol teremos 2 botoes de fim de curso, 1 em cada extremidade do varal, onde algo ira clicar e automaticamente havera a parada dos motores.</h5>
 
 
 <h1>Agradecimentos</h1>
 
-<h5>Gostariamos de agradecer a todo apoio que nosso orientador Gabriel Solino professor do Instituto Federal nos deu, tambem gostariamos de agradecer aos outros professores pelo apoio para que nosso projeto funcionasse e tambem aos nossos amigos pelas motivações e apoio moral.</h5>
+<h5>Gostariamos de agradecer a todo apoio que nosso orientador Gabriel Solino professor do Instituto Federal nos deu, e tambem ao nosso segundo coorientador Pedrinho e tambem gostariamos de agradecer aos outros professores pelo apoio para que nosso projeto funcionasse e tambem aos nossos amigos pelas motivações e apoio moral.</h5>
 
 
