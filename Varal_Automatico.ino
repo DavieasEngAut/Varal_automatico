@@ -1,4 +1,6 @@
 
+
+
 //Definiçao pino Sensor de Chuva
 #define pinRainsensor A0
 
@@ -10,7 +12,7 @@
 int valorCursor;
 int valorCursor2;
 
-//Variavel para capturar o valor do Sensor de Chuva
+//Variavel para leiturar o valor do Sensor de Chuva
 int valorSensor;
 
 // Pinos Motor Varal 1
@@ -21,17 +23,16 @@ int valorSensor;
 #define pinMot2A 5
 #define pinMot2B 6
 
-/*Caso queira usar delay nos motores basta descomentar esta parte
-const int tempo = 7000;
-*/
+/*Velocidade para os motores*/
+#define velocidade 11
 
 void setup(){
 
     Serial.begin(9600);
 
-    //Set dos pinos do Sensor fim de curso para receberem energia
-    pinMode(switchCursor, INPUT);
-    pinMode(switchCursor2, INPUT);
+    //Set dos pinos do fim de curso
+    pinMode(switchCursor, INPUT_PULLUP);
+    pinMode(switchCursor2, INPUT_PULLUP);
   
 
   // Deixando os pinos dos motores para soltarem energia
@@ -40,25 +41,26 @@ void setup(){
     pinMode(pinMot2A, OUTPUT);
     pinMode(pinMot2B, OUTPUT);
 
+    /*Definiçao pino de velocidade*/
+    pinMode(velocidade, OUTPUT);
+
 
 }
 
 void loop(){
 
 
-// Captura dos valores do Sensor de Fim de curso
+// leitura dos valores do Sensor de Fim de curso
     valorCursor = digitalRead(switchCursor);
     valorCursor2 = digitalRead(switchCursor2);
 
 
-//Captura Valores sensor de chuva 
+// leitura dos Valores sensor de chuva 
     valorSensor = analogRead(pinRainsensor);
-    valorSensor = map(pinRainsensor, 0, 1023, 100, 0);
+    valorSensor = map(pinRainsensor, 0, 1023, 0, 1000);
 
 /*
-
 Aferiçao dos Valores dos Sensores em tempo Real no Serial
-
 */
     Serial.print(valorSensor);
     delay(100);
@@ -79,12 +81,15 @@ Aferiçao dos Valores dos Sensores em tempo Real no Serial
   /*Supervisionamento dos Motores e ativaçâo*/
 
   // Condicional para retrair o varal
-  if (valorSensor < 800 && valorCursor == 1 ){
+  if ((valorSensor < 800) && (valorCursor == 1) ){
 
     digitalWrite(pinMot1A, HIGH);
     digitalWrite(pinMot1B, LOW);
     digitalWrite(pinMot2A, HIGH);
     digitalWrite(pinMot2B, LOW);
+    valorSensor = analogRead(pinRainsensor);
+    valorCursor = digitalRead(switchCursor);
+    valorCursor2 = digitalRead(switchCursor2);
 
   }else{
 
@@ -99,12 +104,14 @@ Aferiçao dos Valores dos Sensores em tempo Real no Serial
   
   
   // Condicional para expor o varal ao sol
- if (valorSensor > 800 && valorCursor2 == 1 ){
+ if ((valorSensor > 800) && (valorCursor2 == 1)){
     
     digitalWrite(pinMot1A, LOW);
     digitalWrite(pinMot1B, HIGH);
     digitalWrite(pinMot2A, LOW);
     digitalWrite(pinMot2B, HIGH);
+    valorSensor = analogRead(pinRainsensor);
+    valorCursor2 = digitalRead(switchCursor2);
 
     }else{
 
