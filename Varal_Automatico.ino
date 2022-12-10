@@ -86,7 +86,6 @@ Aferiçao dos Valores dos Sensores em tempo Real no Serial
     digitalWrite(pinMot2B, LOW);
     valorSensor = analogRead(pinRainsensor);
     valorCursor = digitalRead(switchCursor);
-    valorCursor2 = digitalRead(switchCursor2);
 
   }else{
 
