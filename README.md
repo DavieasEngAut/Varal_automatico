@@ -1,9 +1,3 @@
-<div align="center">	
-<img src="https://user-images.githubusercontent.com/70967912/206793699-7bf8e280-3e46-4058-bb7c-ae2a7412086d.jpeg" width="600px"/>
-
-</div>
-
-
 # Varal automatico
 Projeto de um Varal Automatizado Com Arduino
 
