@@ -35,6 +35,6 @@ Montagem do Circuito completa, pinos e etc.
 
 <h1>Agradecimentos</h1>
 
-<h5>Gostariamos de agradecer a todo apoio que nosso orientador Gabriel Solino professor do Instituto Federal nos deu, e tambem ao nosso segundo coorientador Pedrinho e tambem gostariamos de agradecer aos outros professores pelo apoio para que nosso projeto funcionasse e tambem aos nossos amigos pelas motivações e apoio moral.</h5>
+<h5>Gostariamos de agradecer a todo apoio que nosso orientador Gabriel Solino professor do Instituto Federal nos deu todo apoio e auxilio, e tambem ao nosso segundo coorientador Pedrinho e tambem gostariamos de agradecer aos outros professores pelo apoio para que nosso projeto funcionasse e tambem aos nossos amigos pelas motivações e apoio moral.</h5>
 
 
